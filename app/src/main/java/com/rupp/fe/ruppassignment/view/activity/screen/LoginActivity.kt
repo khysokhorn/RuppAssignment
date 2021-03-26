@@ -1,5 +1,7 @@
 package com.rupp.fe.ruppassignment.view.activity.screen
 
+// hello I have commit from here 
+
 import android.content.Intent
 import android.util.Log
 import androidx.databinding.DataBindingUtil
