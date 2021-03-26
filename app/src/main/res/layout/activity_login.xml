@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="35dp"
+            android:gravity="center"
+            android:text="Dialy Calendar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/secondaryColorDarkGreen"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="35dp"
+            android:gravity="center"
+            android:text="Welcome Back!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/md_grey_700"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal15"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_input"
+            android:hint="Your email address"
+            android:padding="15dp"
+            android:textColorHint="@color/colorHint" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal15"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_input"
+            android:hint="Password"
+            android:padding="15dp"
+            android:textColorHint="@color/colorHint" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_horizontal15"
+            android:layout_marginTop="25dp"
+            android:padding="15dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/radius_conrer_10" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_horizontal15"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:id="@+id/tvForgetpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Forget password?"
+                android:textColor="@color/md_orange_900" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/btnSignInGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="@dimen/margin_horizontal15"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="Sign In"
+                    android:textColor="@color/md_orange_500"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="@dimen/radius_conrer_10"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignInFB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="@dimen/margin_horizontal15"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:text="Sign In"
+                    android:textColor="@color/md_orange_500"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="@dimen/radius_conrer_10"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvDontHaveAcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account?"
+                    android:textColor="@color/md_grey_700" />
+
+                <TextView
+                    android:id="@+id/tvDontHaveAccAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Sign UP"
+                    android:textColor="@color/md_orange_900" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>
