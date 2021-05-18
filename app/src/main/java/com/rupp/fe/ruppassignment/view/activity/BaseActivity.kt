@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseActivity<B : ViewBinding> : AppCompatActivity() {
+    protected val TAG = javaClass.name
     lateinit var binding: B
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

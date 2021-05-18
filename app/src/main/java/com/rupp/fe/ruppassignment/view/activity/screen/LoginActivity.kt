@@ -1,27 +1,20 @@
 package com.rupp.fe.ruppassignment.view.activity.screen
 
-// hello I have commit from here 
-
 import android.content.Intent
 import android.util.Log
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.rupp.fe.ruppassignment.R
 import com.rupp.fe.ruppassignment.databinding.ActivityLoginBinding
-import com.rupp.fe.ruppassignment.factory.BaseViewModelFactory
-import com.rupp.fe.ruppassignment.modelData.LoginDataModel
+import com.rupp.fe.ruppassignment.modelData.other.LoginDataModel
 import com.rupp.fe.ruppassignment.presenter.LoginPresenterImpl
-import com.rupp.fe.ruppassignment.utils.Status
 import com.rupp.fe.ruppassignment.view.activity.BaseActivity
 import com.rupp.fe.ruppassignment.view.activity.viewInf.LoginView
-import com.rupp.fe.ruppassignment.viewModel.LoginViewModel
 
 class LoginActivity : BaseActivity<ActivityLoginBinding>(), LoginView {
-    private val TAG = "LoginActivity"
     override fun getViewBind(): ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
     lateinit var loginPresenterImpl: LoginPresenterImpl
     private val REQUEST_CODE = 123
@@ -29,7 +22,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(), LoginView {
 
     override fun initView() {
         auth = FirebaseAuth.getInstance()
-        loginPresenterImpl = LoginPresenterImpl(this, LoginDataModel(this))
+        loginPresenterImpl = LoginPresenterImpl(LoginDataModel(this))
         binding.btnSignInGoogle.setOnClickListener {
             onGmailLogin()
         }
@@ -39,30 +32,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(), LoginView {
     }
 
     override fun loadData() {
-        val loginViewModel = BaseViewModelFactory().create(LoginViewModel::class.java)
-        loginViewModel.getUser().observe(this, Observer { it ->
-            when (it.status) {
-                Status.SUCCESS -> Log.d(TAG, "${
-                    it.data.let {
-                        Log.d(TAG, "loadData: user list $it")
-                    }
-                }")
-                Status.ERROR -> Log.e(TAG, "loadData: error with ${it.message}")
-                Status.LOADING -> Log.d(TAG, "loadData: loading ")
-            }
-        })
 
-        loginViewModel.getEventList().observe(this, Observer { it ->
-            when (it.status) {
-                Status.SUCCESS -> Log.d(TAG, "${
-                    it.data.let {
-                        Log.d("$TAG ====>", "loadData: event list $it")
-                    }
-                }")
-                Status.ERROR -> Log.e("$TAG ====>", "loadData: error with ${it.message}")
-                Status.LOADING -> Log.d("$TAG ====>", "loadData: loading ")
-            }
-        })
     }
 
     override fun onGmailLogin() {

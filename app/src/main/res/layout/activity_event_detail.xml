@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.screen.EventDetailActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarEventDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolEventDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:title="Event Detail"
+                app:titleTextColor="@color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_margin="@dimen/margin_horizontal15"
+            android:layout_weight="0.55"
+            app:cardCornerRadius="@dimen/radius_conrer_10"
+            app:cardElevation="@dimen/radius_conrer_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="@dimen/radius_conrer_10">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Title"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- label -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Date"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_space_5"
+                            android:text="End Date"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Start Time"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_space_5"
+                            android:text="End Time"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_space_5"
+                            android:text="Kind"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                    </LinearLayout>
+                    <!--                decore -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/item_space_5"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=":"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                    </LinearLayout>
+                    <!--               value -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvStartDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_space_5"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:id="@+id/tvStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:id="@+id/tvEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_space_5"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        <TextView
+                            android:id="@+id/tvKindEvent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/item_space_5"
+                            android:text=""
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal15"
+                app:cardCornerRadius="@dimen/radius_conrer_10"
+                app:cardElevation="@dimen/radius_conrer_10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/radius_conrer_10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Personal"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- label -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Created Date"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Updated Date"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Create By"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="Organizer"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="Status"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="Event Type"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="Description"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </LinearLayout>
+                        <!--                decore -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/item_space_5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </LinearLayout>
+                        <!--               value -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tcCreatedDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="fd"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tcUpdatedDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="fd"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:id="@+id/tvCreatedBy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="e@gmail.com"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tvOrganizer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="e@gmail.com"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tvStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="status"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tvEventType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="type"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tvDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="type"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_horizontal15"
+                android:layout_marginTop="@dimen/margin_horizontal15"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/radius_conrer_10"
+                app:cardElevation="@dimen/radius_conrer_10"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/radius_conrer_10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Other Information"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- label -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Updated"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Summary"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TimeZone"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="Access Role"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </LinearLayout>
+                        <!--                decore -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/item_space_5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text=":"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                        </LinearLayout>
+                        <!--               value -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvOtherUpdated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="fd"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tvOtherSummary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="fd"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+
+                            <TextView
+                                android:id="@+id/tvtvOtherTimeZone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="e@gmail.com"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                            <TextView
+                                android:id="@+id/tvOtherAccessRole"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/item_space_5"
+                                android:text="e@gmail.com"
+                                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

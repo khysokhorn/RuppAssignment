@@ -2,8 +2,9 @@ package com.rupp.fe.ruppassignment.model.eventModel
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-data class Item(
+data class ItemModel(
     @SerializedName("colorId")
     val colorId: String,
     @SerializedName("created")
@@ -44,4 +45,4 @@ data class Item(
     val summary: String,
     @SerializedName("updated")
     val updated: String
-)
+) : Serializable

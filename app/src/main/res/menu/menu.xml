@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/acEvent"
+        android:checkable="true"
+        android:checked="true"
+        android:title="Event List" />
+    <item
+        android:id="@+id/acDashboard"
+        android:checkable="true"
+        android:checked="true"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/acTrack"
+        android:checkable="true"
+        android:checked="true"
+        android:title="Track" />
+    <item
+        android:id="@+id/acQuot"
+        android:checkable="true"
+        android:checked="true"
+        android:title="Quot" />
+</menu>

@@ -11,9 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RuppAssignment">
-        <activity android:name=".view.activity.screen.EventListActivity">
-
-        </activity>
+        <activity android:name=".view.activity.screen.EventDetailActivity"></activity>
+        <activity android:name=".view.activity.screen.TestActivity" />
+        <activity android:name=".view.activity.screen.EventListActivity" />
         <activity android:name=".view.activity.screen.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
